@@ -1,6 +1,6 @@
 # Crude Oil Analysis with PySpark & Apache Iceberg
 
-This project analyzes the U.S. Crude Oil Import dataset using PySpark and demonstrates writing results in Apache Iceberg format, which uses Docker as the container.
+This project analyzes the U.S. Crude Oil Import dataset using PySpark and delivers results in csv or Apache Iceberg format (Bonus Question), which uses Docker as the container.
 
 ## Dataset
 - Source: [Kaggle - U.S. Crude Oil Imports](https://www.kaggle.com/datasets/alistairking/u-s-crude-oil-imports/data)
