@@ -13,11 +13,6 @@ spark = SparkSession.builder \
 # Load Data
 df = spark.read.csv("/data/data.csv", header=True, inferSchema=True)
 
-# Output Data
-output_dir = "./output/top5_destinations_albania"
-
-# Create the directory if it doesn't exist
-os.makedirs(output_dir, exist_ok=True)
 
 # Filter: Origin = Albania
 df_albania = df.filter(col("originName") == "Albania").filter(col("originTypeName") == "Country")
@@ -31,8 +26,6 @@ top5_dest = (df_albania.groupBy("destinationName")
 # Show result
 top5_dest.show()
 
-# Save to local output directory
-# top5_dest.write.mode("overwrite").csv(output_dir, header=True)
 # Write to Iceberg table (local catalog)
 top5_dest.writeTo("local.db.top5_albania").using("iceberg").createOrReplace()
 print("Warehouse path:", spark.conf.get("spark.sql.catalog.local.warehouse"))
