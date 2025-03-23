@@ -1,0 +1,86 @@
+{
+  "format-version" : 1,
+  "table-uuid" : "ef29a691-b5d6-42f7-8d5e-6a96edb18c26",
+  "location" : "./warehouse/db/top5_albania",
+  "last-updated-ms" : 1742703534202,
+  "last-column-id" : 2,
+  "schema" : {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "destinationName",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 2,
+      "name" : "total_quantity",
+      "required" : false,
+      "type" : "long"
+    } ]
+  },
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "destinationName",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 2,
+      "name" : "total_quantity",
+      "required" : false,
+      "type" : "long"
+    } ]
+  } ],
+  "partition-spec" : [ ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ ]
+  } ],
+  "last-partition-id" : 999,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "spark"
+  },
+  "current-snapshot-id" : 4738567199806116269,
+  "refs" : {
+    "main" : {
+      "snapshot-id" : 4738567199806116269,
+      "type" : "branch"
+    }
+  },
+  "snapshots" : [ {
+    "snapshot-id" : 4738567199806116269,
+    "timestamp-ms" : 1742703534202,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1742703520928",
+      "added-data-files" : "1",
+      "added-records" : "5",
+      "added-files-size" : "1006",
+      "changed-partition-count" : "1",
+      "total-records" : "5",
+      "total-files-size" : "1006",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "warehouse/db/top5_albania/metadata/snap-4738567199806116269-1-6f309e56-835e-424b-827c-dda0939acb8d.avro",
+    "schema-id" : 0
+  } ],
+  "statistics" : [ ],
+  "snapshot-log" : [ {
+    "timestamp-ms" : 1742703534202,
+    "snapshot-id" : 4738567199806116269
+  } ],
+  "metadata-log" : [ ]
+}
