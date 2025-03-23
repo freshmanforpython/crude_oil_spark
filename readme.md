@@ -1,6 +1,6 @@
 # Crude Oil Analysis with PySpark & Apache Iceberg
 
-This project analyzes the U.S. Crude Oil Import dataset using PySpark and demonstrates writing results in Apache Iceberg format. The project is fully Dockerized for reproducibility and ease of setup.
+This project analyzes the U.S. Crude Oil Import dataset using PySpark and demonstrates writing results in Apache Iceberg format, which uses Docker as the container.
 
 ## Dataset
 - Source: [Kaggle - U.S. Crude Oil Imports](https://www.kaggle.com/datasets/alistairking/u-s-crude-oil-imports/data)
@@ -18,13 +18,13 @@ This project analyzes the U.S. Crude Oil Import dataset using PySpark and demons
 ### 2. For UK, Destinations with Total Quantity > 100,000
 - **Script:** `job2_uk_gt_100k.py`
 - **Logic:**
-  - Filter originName = "UK"
+  - Filter originName = "UK" and originTypeName = "Country"
   - Group by destinationName, sum quantity > 100,000
 
 ### 3. Most Exported Grade per Year and Origin
 - **Script:** `job3_most_exported_grade.py`
 - **Logic:**
-  - Group by year, originName, grade
+  - Group by year, originName, gradeName
   - Sum quantity
   - Use window function to get top grade per year and origin
 
@@ -55,7 +55,6 @@ docker run --rm \
 - Files: Iceberg table written under `./warehouse/db/top5_albania`
 
 ## 📝 Notes
-- Parquet output can be read locally via PySpark or Pandas using read_parquet.py
-- Iceberg provides schema evolution, data versioning, and efficient queries
+- Parquet output can be read locally via PySpark or Pandas. read_parquet.py is provided to read Parquet files.
 
 
